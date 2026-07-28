@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(powershell -Command \"Test-Path 'C:\\\\Users\\\\NSX\\\\Downloads\\\\argus.png'\")",
+      "Bash(npx --yes create-next-app@latest . --typescript --eslint --tailwind --app --src-dir --import-alias \"@/*\" --no-turbopack --use-npm)"
+    ]
+  }
+}
