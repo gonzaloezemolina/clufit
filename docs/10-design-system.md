@@ -1,158 +1,178 @@
 # 10 - Design System
 
-Versión: 1.0
+Versión: 2.0
 
 ---
 
 # Objetivo
 
-El Design System de Clufit define la identidad visual, las reglas de interacción y la comunicación del producto.
+El Design System de Clufit define la identidad visual, los componentes y las reglas de diseño que deberán respetarse durante todo el desarrollo del producto.
 
-Su objetivo es garantizar consistencia en toda la experiencia de usuario.
+Su propósito es garantizar consistencia, escalabilidad y una experiencia premium en todas las plataformas.
 
-Clufit no es una aplicación genérica de fitness.
+Clufit es una aplicación mobile-first.
 
-Es una plataforma mobile-first enfocada en ayudar a las personas a construir hábitos sostenibles, tanto de forma individual como junto a un compañero.
+La interfaz debe transmitir calma, tecnología y progreso.
 
----
-
-# Principios de Diseño
-
-## Simplicidad
-
-La interfaz debe reducir la carga cognitiva.
-
-El usuario siempre debe entender cuál es la siguiente acción.
+Nunca deberá sentirse como una aplicación fitness tradicional.
 
 ---
 
-## Consistencia
+# Filosofía
 
-Todos los componentes deben comportarse de forma predecible.
+La interfaz no debe llamar la atención por utilizar muchos colores.
 
-La experiencia debe sentirse uniforme en toda la aplicación.
+Debe destacar por su limpieza, profundidad y excelente jerarquía visual.
 
----
+Los colores vibrantes únicamente aparecerán para comunicar información importante.
 
-## Premium
-
-La interfaz debe transmitir calidad.
-
-Evitar ruido visual.
-
-Cada pantalla debe sentirse cuidadosamente diseñada.
+La prioridad siempre será el contenido.
 
 ---
 
-## Humana
+# Estilo Visual
 
-La tecnología debe sentirse cercana.
-
-Nunca infantil.
-
-Nunca fría.
-
----
-
-## Companion First
-
-La sincronización entre usuarios forma parte de la identidad de Clufit.
-
-La interfaz debe reforzar constantemente la idea de progresar junto a otra persona.
-
----
-
-# Lenguaje Visual
-
-Inspiración:
+Inspiración
 
 - Apple
 - Linear
+- Raycast
 - Arc Browser
-- Nothing
+- Vercel Dashboard
 
-Características:
+Características
 
 - Minimalista
+- Premium
+- Elegante
 - Mucho espacio en blanco
+- Mucho aire entre componentes
 - Bordes redondeados
-- Sombras suaves
-- Gradientes premium
-- Animaciones fluidas
-- Glassmorphism muy sutil
+- Sombras extremadamente suaves
+- Glassmorphism sutil
 - Excelente jerarquía visual
 
-Evitar:
+Evitar
 
 - Estética gamer
-- Neumorphism pesado
-- Interfaces médicas
-- Branding fitness agresivo
+- Estética fitness tradicional
 - Colores extremadamente saturados
+- Interfaces médicas
+- Neumorphism pesado
+- Demasiadas ilustraciones
 
 ---
 
-# Paleta de Colores
+# Modo Oscuro
 
-## Primary
+El modo oscuro constituye la identidad principal de Clufit.
 
-#28417F
-
----
-
-## Secondary
-
-#4BAAF8
+El modo claro podrá existir en futuras versiones, pero el producto será diseñado inicialmente para Dark Mode.
 
 ---
 
-## Accent
+# Paleta
 
-#C9D5EB
+## Primary Background
 
----
-
-## Background Light
-
-#F6F8FC
+#0F1117
 
 ---
 
-## Background Dark
+## Secondary Background
 
-#0E101C
+#171B24
 
 ---
 
 ## Surface
 
+#1F2430
+
+---
+
+## Elevated Surface
+
+#262D3A
+
+---
+
+## Border
+
+rgba(255,255,255,.06)
+
+---
+
+## Divider
+
+rgba(255,255,255,.08)
+
+---
+
+## Primary Text
+
 #FFFFFF
 
 ---
 
-## Text Primary
+## Secondary Text
 
-#111827
-
----
-
-## Text Secondary
-
-#6B7280
+#A8AFBC
 
 ---
 
-# Gradientes
+## Disabled
 
-Los gradientes deberán ser suaves.
+#5E6673
 
-Principal:
+---
 
-#28417F → #4BAAF8
+# Accent
 
-Los fondos podrán utilizar degradados muy sutiles.
+El color principal de Clufit es el blanco.
 
-Nunca utilizar transiciones agresivas.
+Los colores vibrantes nunca representan la identidad del producto.
+
+Únicamente comunican:
+
+- Insights
+- Estados
+- Progreso
+- Animaciones
+- Hero Sections
+- Marketing
+
+---
+
+# Mesh Gradient
+
+Clufit utilizará un único Mesh Gradient oficial.
+
+Colores
+
+- #0F1117
+- #98E4FF
+- #F62950
+
+Características
+
+- Muy suave
+- Muy difuminado
+- Sin colores neón
+- Alta textura
+- Baja saturación
+
+Uso
+
+- Landing Page
+- Hero Sections
+- Splash Screen
+- Empty States
+- Onboarding
+- Marketing
+- Backgrounds destacados
+
+Nunca utilizarlo como fondo permanente de todas las pantallas.
 
 ---
 
@@ -162,13 +182,19 @@ Small
 
 12px
 
+---
+
 Medium
 
 18px
 
+---
+
 Large
 
 24px
+
+---
 
 Extra Large
 
@@ -176,72 +202,112 @@ Extra Large
 
 ---
 
+# Espaciado
+
+Utilizar una escala basada en 8.
+
+8
+
+16
+
+24
+
+32
+
+40
+
+48
+
+64
+
+Nunca utilizar espacios aleatorios.
+
+---
+
 # Sombras
 
-Sombras muy suaves.
+Sombras extremadamente suaves.
 
-Blur amplio.
+El volumen deberá lograrse mediante:
 
-Baja opacidad.
+- Elevación
+- Espaciado
+- Contraste
 
-La profundidad deberá lograrse principalmente mediante espaciado.
+No mediante sombras fuertes.
 
 ---
 
 # Cards
 
-Las Cards constituyen el componente principal de la interfaz.
+Las Cards constituyen el componente principal de la aplicación.
 
-Características:
+Características
 
-- Bordes redondeados.
-- Sombras suaves.
-- Mucho padding.
-- Excelente jerarquía visual.
+- Mucho padding
+- Mucho aire
+- Bordes redondeados
+- Fondo Surface
+- Borde muy sutil
+- Excelente jerarquía visual
 
-Podrán contener:
+Podrán contener
 
-- Estadísticas.
-- Insights.
-- Gráficos.
-- Acciones.
-- Progreso.
-- Actividad del compañero.
+- Estadísticas
+- Insights
+- Actividad del compañero
+- Retos
+- Gráficos
+- Acciones
+
+---
+
+# Botones
+
+Los botones deberán ser simples.
+
+Primario
+
+- Fondo blanco
+- Texto negro
+
+Secundario
+
+- Surface
+- Borde sutil
+
+Ghost
+
+- Sin fondo
+
+Nunca utilizar botones excesivamente decorados.
 
 ---
 
 # Iconografía
 
-Estilo:
+Estilo
 
-- Minimalista.
-- Rounded.
-- Outline.
+- Outline
+- Rounded
+- Minimal
 
-Los iconos Filled deberán utilizarse únicamente para estados activos.
+Filled únicamente para estados activos.
 
 ---
 
-# Ilustraciones
+# Tipografía
 
-Estilo:
+A definir.
 
-Soft 3D.
+Debe transmitir:
 
-Características:
+- Tecnología
+- Modernidad
+- Claridad
+- Excelente legibilidad
 
-- Objetos flotantes.
-- Cristal.
-- Luz azul.
-- Capas.
-- Profundidad.
-
-Evitar:
-
-- Personajes.
-- Mascotas.
-- Estilo cartoon.
-- Estética gamer.
+Nunca utilizar tipografías futuristas.
 
 ---
 
@@ -249,45 +315,61 @@ Evitar:
 
 Las animaciones deberán sentirse:
 
-- Naturales.
-- Elegantes.
-- Rápidas.
-- Útiles.
+- Naturales
+- Elegantes
+- Rápidas
 
-Duración recomendada:
+Duración recomendada
 
-150ms – 300ms.
+150ms–300ms
 
-Nunca utilizar animaciones innecesarias.
+Toda animación deberá comunicar algo.
+
+Nunca decorar.
+
+---
+
+# Ilustraciones
+
+Estilo
+
+- Abstracto
+- Soft 3D
+- Cristal
+- Profundidad
+- Luz
+- Partículas
+
+Evitar
+
+- Personajes
+- Dibujos
+- Mascotas
+- Músculos
+- Mancuernas
+- Fuego
+- Estética fitness
 
 ---
 
 # Comunicación
 
-Clufit utiliza dos voces claramente diferenciadas.
+Existen dos voces.
+
+---
 
 ## Clufit
 
 Representa la marca.
 
-Comunica de forma:
+Comunicación
 
-- Profesional.
-- Positiva.
-- Clara.
-- Motivadora.
+- Profesional
+- Clara
+- Cercana
+- Positiva
 
 Nunca utiliza sarcasmo.
-
-Ejemplos:
-
-"Seguí construyendo consistencia."
-
-"Entrenamiento completado."
-
-"Tu recuperación mejoró."
-
-"Vas por buen camino."
 
 ---
 
@@ -295,107 +377,87 @@ Ejemplos:
 
 Representa el sistema inteligente.
 
-Argus no es un chatbot.
+Argus nunca es un chatbot.
 
-No mantiene conversaciones.
+Argus:
 
-No responde preguntas.
+- Observa
+- Detecta
+- Analiza
+- Recomienda
 
-No inicia chats.
+Siempre comunica mediante Insights breves.
 
-Su función es:
-
-- Observar.
-- Detectar.
-- Analizar.
-- Recomendar.
-
-Siempre comunica mediante Insights breves y accionables.
-
-Ejemplos:
-
-"Gonza te sacó ventaja."
-
-"Hace cuatro días que no entrenás."
-
-"Tu procrastinación aumentó."
-
-"Dormiste mejor que el promedio."
-
-Cada Insight deberá finalizar proponiendo una acción.
-
-Ejemplos:
-
-- Ver entrenamiento.
-- Registrar agua.
-- Ver recomendación.
-- Aceptar reto.
-
-Nunca:
-
-"¿Querés analizar esto?"
-
-"¿En qué puedo ayudarte?"
+Nunca mantiene conversaciones.
 
 ---
 
-## Retos
+# Retos
 
-El humor existe únicamente entre usuarios sincronizados.
+El humor únicamente existe entre usuarios sincronizados.
 
 Nunca proviene de Clufit.
 
 Nunca proviene de Argus.
 
-Ejemplos:
+Ejemplos
 
-"El perdedor paga la cena."
+"The loser buys dinner."
 
-"El ganador elige la película."
+"You're falling behind."
 
-"El que pierda invita el café."
-
-El objetivo es reforzar la competencia sana y la relación entre compañeros.
-
----
-
-# Accesibilidad
-
-- Contraste suficiente.
-- Dynamic Type.
-- Touch Targets mínimos de 44x44 px.
-- Respetar Reduce Motion.
-
----
-
-# Mobile First
-
-Clufit está diseñado prioritariamente para dispositivos móviles.
-
-Todas las decisiones de diseño deberán tomarse pensando primero en la experiencia mobile.
+"Gonza just took the lead."
 
 ---
 
 # Idioma
 
-La documentación del proyecto se mantendrá en español.
+Toda la experiencia del producto será desarrollada en inglés.
 
-La aplicación, el sitio web, las notificaciones, los textos de interfaz, el contenido público y toda la experiencia de usuario estarán desarrollados íntegramente en inglés.
+Incluye
+
+- Aplicación
+- Sitio web
+- Dashboard
+- Notificaciones
+- Emails
+- Landing
+- Marketing
+
+La documentación técnica permanecerá en español.
 
 ---
 
-# Filosofía
+# Mobile First
 
-Clufit debe sentirse como un producto premium.
+Toda decisión de diseño deberá priorizar dispositivos móviles.
 
-No es una aplicación para contar calorías.
+Desktop será una adaptación.
 
-No es una aplicación para registrar entrenamientos.
+Nunca el punto de partida.
 
-No es una lista de hábitos.
+---
 
-Es una plataforma inteligente que ayuda a las personas a construir consistencia y progresar, solas o junto a alguien más.
+# Accesibilidad
 
-La tecnología debe desaparecer.
+- Contraste AA
+- Dynamic Type
+- Reduce Motion
+- Touch Targets mínimos de 44x44 px
 
-La experiencia debe permanecer.
+---
+
+# Assets
+
+El repositorio incluirá una carpeta `/assets/design-system/` con referencias visuales oficiales.
+
+Ejemplo
+
+- colors.png
+- gradients.png
+- buttons.png
+- cards.png
+- spacing.png
+- icons.png
+
+Estas imágenes complementan la documentación escrita y sirven como referencia visual para diseñadores e IA.
