@@ -1,0 +1,13 @@
+{
+  "name": "clufit",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "mobile": "npm run start --workspace apps/mobile",
+    "admin": "npm run dev --workspace apps/admin",
+    "lint": "npm run lint --workspace apps/mobile && npm run lint --workspace apps/admin"
+  }
+}
