@@ -5,9 +5,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { supabase } from '@/lib/supabase';
 
+// Only email + password here: docs/12-onboarding.md ("Progressive Profiling")
+// collects the name and everything else in the About You step right after
+// sign-up, so we don't ask for it twice.
 export default function SignUp() {
-  const [fullname, setFullname] = useState('');
-  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -17,11 +18,7 @@ export default function SignUp() {
   async function handleSignUp() {
     setError(null);
     setIsSubmitting(true);
-    const { data, error: signUpError } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { data: { fullname, username } },
-    });
+    const { data, error: signUpError } = await supabase.auth.signUp({ email, password });
     setIsSubmitting(false);
 
     if (signUpError) {
@@ -31,7 +28,7 @@ export default function SignUp() {
     // With email confirmation enabled (Supabase default), signUp doesn't
     // return an active session yet — the user must confirm via email first.
     // If it *is* returned, the auth store picks it up and the root Stack
-    // redirects into (app) automatically.
+    // redirects into onboarding automatically.
     if (!data.session) setConfirmationSent(true);
   }
 
@@ -57,19 +54,6 @@ export default function SignUp() {
 
         <TextInput
           className="rounded-md border border-accent bg-surface px-4 py-3 text-text-primary"
-          placeholder="Full name"
-          value={fullname}
-          onChangeText={setFullname}
-        />
-        <TextInput
-          className="rounded-md border border-accent bg-surface px-4 py-3 text-text-primary"
-          placeholder="Username"
-          autoCapitalize="none"
-          value={username}
-          onChangeText={setUsername}
-        />
-        <TextInput
-          className="rounded-md border border-accent bg-surface px-4 py-3 text-text-primary"
           placeholder="Email"
           autoCapitalize="none"
           keyboardType="email-address"
@@ -88,7 +72,7 @@ export default function SignUp() {
 
         <Pressable
           className="items-center rounded-md bg-primary py-3 disabled:opacity-50"
-          disabled={isSubmitting || !email || !password || !fullname || !username}
+          disabled={isSubmitting || !email || !password}
           onPress={handleSignUp}>
           <Text className="font-semibold text-white">
             {isSubmitting ? 'Creating account…' : 'Sign up'}

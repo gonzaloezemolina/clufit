@@ -8,6 +8,7 @@
     "@clufit/types": "^0.0.0",
     "@clufit/utils": "^0.0.0",
     "@expo/ui": "~57.0.9",
+    "@react-native-community/datetimepicker": "^8.4.5",
     "@tanstack/react-query": "^5.101.4",
     "expo": "~57.0.10",
     "expo-constants": "~57.0.9",
